@@ -1,0 +1,108 @@
+.header-hero {
+  display: flex;
+  padding: 100px 80px;
+  background: #f7f7f7;
+
+  > * {
+  }
+}
+
+.left {
+  margin-right: 130px;
+}
+
+.right {
+  max-width: 544px;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #1c2e36;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+.text {
+  margin-bottom: 30px;
+  color: #1c2e36;
+  font-size: 16px;
+}
+
+.notice {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 25px 30px;
+  border: 1px dashed #d3d3d3;
+  border-radius: 20px;
+}
+
+.notice-text {
+  margin-right: 30px;
+  color: #1c2e36;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.notice-top {
+  display: block;
+  height: 13px;
+  background: #ad0615;
+}
+
+.notice-sticker {
+  align-self: flex-start;
+  background: #d81e3e;
+}
+
+.notice-icon {
+  padding: 6px 11px 9px;
+}
+
+.img {
+  width: 100%;
+  max-width: 601px;
+  height: auto;
+}
+
+.notice-bottom {
+  color: #d61f3d;
+  font-size: 13px;
+}
+
+// Global styles
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+  .left {
+    display: none;
+  }
+
+  .header-hero {
+    padding: 100px 40px;
+  }
+}
+
+@include less-md {
+  .notice-text {
+    margin-right: 0;
+  }
+  .notice-sticker {
+    display: none;
+  }
+}
+
+@include less-sm {
+  .header-hero {
+    padding: 100px 24px;
+  }
+}
+
+// Mixes
+
+// Animation

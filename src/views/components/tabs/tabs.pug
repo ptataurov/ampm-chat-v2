@@ -1,0 +1,42 @@
+mixin tabs(mixes)
+
+  - const tabs = require('views/components/tabs/data.js')
+  - const css = require('views/components/tabs/_css.json')
+
+  div(class=css.tabs data-target='Ассортимент акции' class=mixes)
+    h4(class=css.title class='_title') Даже ваша теща полюбит <br> смесители AM.PM со скидками до 30%
+
+    div(class=css.switcher)
+      div(class=css.switcherWrap)
+        each tab, idx in tabs
+          button(class=css.btn class='_btn' class=(idx === 0) && 'active' data-name=tab.name data-avatar=tab.avatar data-text=tab.text data-paper=tab.paper data-img=tab.img data-title=tab.title)= tab.name
+
+    
+    div(class=css.container)
+      each tab, idx in tabs
+        div(class=css.tab class='_tab' class=(idx !== 0) && 'hidden' data-name=tab.name)
+          div(class=css.tabContainer style=`background: url('${tab.img}') center no-repeat`)
+            div(class=css.content style=`background: url('${tab.paper}') left center no-repeat; max-width: ${tab.contentWidth}`)
+              img(class=css.avatar src=tab.avatar alt='Аватар')
+              p(class=css.text)= tab.text
+
+          div(class=css.sliderContainer)
+            div(class=css.slider class='_slider swiper-container')
+              div(class=css.sliderWrapper class='swiper-wrapper')
+                each img in [require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png'), require('views/components/tabs/img/item.png')]
+                  div(class=css.slide class='swiper-slide')
+                    span(class=css.sticker class='font-caveat') -10%
+                    div(class=css.imgContainer)
+                      img(class=css.img src=img alt='Изображение товара')
+                    
+                    div(class=css.slideContent)
+                      span(class=css.collectionName) GEM
+                      span(class=css.productName) Смеситель для умывальника
+                      span(class=css.productNum) F90A02100
+                      a(class=css.link) Узнать больше
+              
+            button(class=css.btnPrev class='swiper-button-prev')
+              img(src=require('views/components/tabs/img/arrow.svg') alt='Иконка')
+
+            button(class=css.btnNext class='swiper-button-next')
+              img(src=require('views/components/tabs/img/arrow.svg') alt='Иконка')

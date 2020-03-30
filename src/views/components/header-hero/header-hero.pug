@@ -1,0 +1,22 @@
+mixin header-hero(mixes)
+
+  - const data = require('views/components/header-hero/data.js')
+  - const css = require('views/components/header-hero/_css.json')
+
+  div(class=css.headerHero data-target='Лёгкая установка' class=mixes)
+    div(class=css.left)
+      img(class=css.img src=require('views/components/header-hero/img/img.png') alt='Изображение')
+    
+    div(class=css.right)
+      span(class=css.title) Ваша безопасность <br> под нашим контролем
+      p(class=css.text) Покупать нашу продукцию абсолютно безопасно, потому что она проходит регулярную дезинфекцию на складе. А все наши сотрудники соблюдают все необходимые меры безопасности и оснащены средствами индивидуальной защиты. <br> <br> Для Вашего удобства и безопасности при монтаже продукции АМ.РМ рекомендуем воспользоваться удобным, простым, и самое главное безопасным сервисом от «Руки»*! Специалисты компании «Руки» пришлют на монтаж профессионала, который сделает установку быстро и с гарантией 1 год.
+
+      div(class=css.notice)
+        p(class=css.noticeText) Каждый специалист сервиса «Руки» проходит медицинское обследование и посещает клиента с полным набором средств персональной защиты!
+        span(class=css.noticeSticker)
+          span(class=css.noticeTop)
+          img(class=css.noticeIcon src=require('views/components/header-hero/img/icon.svg') alt='Иконка')
+        
+      span(class=css.noticeBottom) * Действует на территории Москвы и Санкт-Петербурга.
+
+

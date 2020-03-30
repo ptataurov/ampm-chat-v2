@@ -1,0 +1,28 @@
+mixin header(mixes)
+
+  - const data = require('views/components/header/data.js')
+  - const css = require('views/components/header/_css.json')
+
+  header(class=css.header class=mixes)
+    div(class=css.top)
+      img(class=css.logo src=require('../../../public/img/logo.svg'), alt='Логотип')
+      nav(class=css.nav)
+        each link in ['Онлайн-консультация не выходя из дома', 'Ассортимент акции']
+          button(class=css.link class='_nav-link' class='font-caveat' data-href=link)= link
+
+    h1(class=css.title) Остался дома? <br> У деда есть план!
+
+    div(class=css.popup class='font-caveat')
+      div(class=css.popupRow)
+        span(class=css.popupText) 
+          img(src=require('../../components/header/img/tick.svg'))
+          | Купите сантехнику со скидкой до 30%
+      div(class=css.popupRow)
+        span(class=css.popupText) 
+          img(src=require('../../components/header/img/tick.svg'))
+          | Получите живую консультацию прямо сейчас
+
+      h6(class=css.popupTitle) Лучше, чем в обычном магазине!
+
+
+

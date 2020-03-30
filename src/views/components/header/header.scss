@@ -1,0 +1,157 @@
+.header {
+  min-height: 700px;
+  padding-top: 40px;
+  padding-left: 240px;
+  background: url('./img/bg.png') left top no-repeat;
+  background-size: contain;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.logo {
+  max-width: 140px;
+  margin-right: 60px;
+}
+
+.nav {
+  margin-bottom: -16px;
+}
+
+.link {
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 24px;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.title {
+  margin-bottom: 70px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.popup {
+  position: relative;
+  max-width: 480px;
+  padding: 20px 30px 40px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.popup-title {
+  position: relative;
+  color: #d61f3d;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 1;
+}
+
+.popup-line {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 40px;
+}
+
+.popup-row {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(#1c2e36, 0.1);
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.popup-text {
+  color: #1c2e36;
+  font-size: 25px;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.sticker {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  max-width: 110px;
+}
+
+.sticker-top {
+  height: 15px;
+  background: #ad0615;
+}
+
+.sticker-content {
+  padding: 15px 10px;
+  color: #fff;
+  font-size: 18px;
+  background: #d81e3e;
+}
+
+// Global styles
+
+// Media queries
+
+@media (max-width: 1647.92px) {
+  .header {
+    padding: 40px 24px 30px;
+    background: url('./img/bg-mob.png') center no-repeat;
+    background-size: cover;
+  }
+}
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .top {
+    flex-direction: column;
+  }
+  .logo {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    br {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .link {
+    margin-right: 0 !important;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .popup-line {
+    display: none;
+  }
+}
+
+// Mixes
+
+// Animation

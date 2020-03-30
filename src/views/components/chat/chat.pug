@@ -1,0 +1,29 @@
+mixin chat(mixes)
+
+  - const data = require('views/components/chat/data.js')
+  - const css = require('views/components/chat/_css.json')
+
+  h3(class=css.title data-target='Онлайн-консультация не выходя из дома') Сделайте видео-звонок и покупайте <br> как в обычном магазине
+
+  section(id='_chat' class=css.chat class='')
+
+    video(class=css.bigVideo controls)
+    h4(class=css.chatTitle) Cвободных операторов: <span id='_free'>5</span>
+    div(class=css.video class='collapse')
+
+      video(controls=true)
+      header(class=css.chatHeader)
+        button(class=css.full)
+          span
+        button(class=css.close)
+    
+    header(class=css.chatHeader)
+      button(class=css.muteBtn)
+        img(src=require('../../components/chat/img/mute-i.svg'))
+      button(class=css.noVideoBtn)
+        img(src=require('../../components/chat/img/no-video-i.svg'))
+    button(class=css.chatBtn)
+      span(class=css.outer)
+        span(class=css.inner)
+          span(class=css.icon)
+      | Позвонить
